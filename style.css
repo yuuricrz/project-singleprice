@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    list-style: none;
+}
+:root{
+    --cyan: hsl(179, 62%, 43%);
+    --brightyellow: hsl(71, 73%, 54%);
+    --lightgray: hsl(204, 43%, 93%);
+    --grayishblue: hsl(218, 22%, 67%);
+}
+body{
+    background-color: var(--lightgray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.content{
+    display: grid;
+    grid-template-areas: 
+    "maintext maintext"
+    "price explication";
+}
+.maintext, .infosubs, .explication{
+    padding: 2rem;
+}
+
+/* Join Our Community  */
+.maintext{
+    border-radius: 0.6rem 0.6rem 0 0;
+    background-color: white;
+    grid-area: maintext;
+    font-weight: 700;
+}
+.maintext h1{
+    margin-bottom: 1rem;
+    color: var(--cyan);
+    font-size: 1.5rem;
+}
+.maintext h2{
+    margin-bottom: 1rem;
+    color: var(--brightyellow);
+    font-size: 1.1rem;
+}
+.maintext p{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--grayishblue);
+}
+/* -------------------------- */
+
+/* Monthly Subscription */
+.infosubs{
+    color: white;
+    background-color: var(--cyan);
+    grid-area: price;
+    border-bottom-left-radius: 0.6rem;
+}
+.infosubs h2{
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+.mensality{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+.mensality .price{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.mensality .time{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--lightgray);
+}
+.infosubs .estrategy{
+    font-weight: 400;
+    font-size: 0.9rem;
+    margin-bottom: 3.7rem;
+    
+}
+.infosubs a{
+    font-weight: 700;
+    border-radius: 0.7rem;
+    box-shadow: 0.1rem 0.3rem 0.5rem rgba(0, 0, 0, 0.329);
+    text-decoration: none;
+    color: var(--lightgray);
+    background-color: var(--brightyellow);
+    padding: 0.7rem 5rem;
+}
+/* -------------------------- */
+
+/* Why Us */
+.explication{
+    background-color: rgb(60, 192, 192);
+    grid-area: explication;
+    color: white;
+    border-bottom-right-radius: 0.7rem;
+}
+.explication h2{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+.explication p{
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
+/* -------------------------- */
+@media (max-width:660px) {
+        body{
+            background-color: var(--lightgray);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            max-width: 100%;
+        }
+        .content{
+        max-width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        "maintext"
+        "price"
+        "explication";
+        }
+        .infosubs{
+            color: white;
+            background-color: var(--cyan);
+            grid-area: price;
+            border-bottom-left-radius: 0rem;
+        }
+        .explication{
+            background-color: var(--grayishblue);
+            grid-area: explication;
+            color: white;
+            border-bottom-left-radius: 0.7rem;
+        }
+}
+@media (max-width:360px){
+    .infosubs a{
+        font-weight: 700;
+        border-radius: 0.7rem;
+        box-shadow: 0.1rem 0.3rem 0.5rem rgba(0, 0, 0, 0.329);
+        text-decoration: none;
+        color: var(--lightgray);
+        background-color: var(--brightyellow);
+        padding: 0.7rem 3rem;
+    }
+}
+@media (max-width:285px){
+    .infosubs a{
+        font-weight: 700;
+        border-radius: 0.7rem;
+        box-shadow: 0.1rem 0.3rem 0.5rem rgba(0, 0, 0, 0.329);
+        text-decoration: none;
+        color: var(--lightgray);
+        background-color: var(--brightyellow);
+        padding: 0.7rem 1rem;
+    }
+}
